@@ -1,0 +1,78 @@
+#===================#
+#||  KEYBINDINGS  ||#
+#===================#
+
+bind = $mainMod, Return, exec, $terminal		# abrir terminal
+bind = $mainMod, Q, killactive,				# matar janela em foco
+bind = $mainMod, M, exit,				# sair hyprland
+bind = $mainMod, E, exec, $fileManager			# abrir explorador de arquivos
+bind = $mainMod, V, togglefloating,			# alternar entre stacking e floating
+bind = $mainMod, D, exec, $menu				# abrir app launcher
+bind = $mainMod, P, pseudo,				 # dwindle
+bind = $mainMod, J, togglesplit,			 # dwindle
+bind = , Print, exec, grim ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png && swaync-send "Print!"   # tela cheia
+bind = , Shift+Print, exec, grim -g "$(slurp)" ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png && swaync-send "Print!"  # tela selecionada
+bind = $mainMod, W, exec, ~/.config/scripts/wallpick.sh # wallpaper
+
+# --------------------------------------------------------------------------- #
+
+bind = $mainMod, left, movefocus, l		# foco <-
+bind = $mainMod, right, movefocus, r		# foco ->
+bind = $mainMod, up, movefocus, u 		# foco ^
+bind = $mainMod, down, movefocus, d		# foco v
+
+# --------------------------------------------------------------------------- #
+
+bind = $mainMod, 1, workspace, 1	# ir para AdT 1
+bind = $mainMod, 2, workspace, 2	# ir para AdT 2
+bind = $mainMod, 3, workspace, 3	# ir para AdT 3
+bind = $mainMod, 4, workspace, 4	# ir para AdT 4
+bind = $mainMod, 5, workspace, 5	# ir para AdT 5
+
+# --------------------------------------------------------------------------- #
+
+bind = $mainMod, mouse_down, workspace, e+1  # usar mouse para alterar AdT
+bind = $mainMod, mouse_up, workspace, e-1    # usar mouse para alterar AdT
+
+# --------------------------------------------------------------------------- #
+
+bind = $mainMod SHIFT, 1, movetoworkspace, 1    # mover janela para AdT 1 	   
+bind = $mainMod SHIFT, 2, movetoworkspace, 2	# mover janela para AdT 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3	# mover janela para AdT 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4 	# mover janela para AdT 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5	# mover janela para AdT 5
+
+# --------------------------------------------------------------------------- #
+
+bind = $mainMod, mouse_down, workspace, e+1   	# mover entre AdT com mouse
+bind = $mainMod, mouse_up, workspace, e-1	# mover entre AdT com mouse
+
+# --------------------------------------------------------------------------- #
+
+bindm = $mainMod, mouse:272, movewindow		# mover janelas com mouse
+bindm = $mainMod, mouse:273, resizewindow	# alterar tamanho de janelas com mouse
+
+# --------------------------------------------------------------------------- #
+
+bind = $mainMod, Z, togglespecialworkspace, magic         # ir para AdT secreta
+bind = $mainMod SHIFT, Z, movetoworkspace, special:magic  # mover janela para AdT secreta
+
+# --------------------------------------------------------------------------- #
+
+bindm = $mainMod, mouse:272, movewindow  	# mover janela com mouse
+bindm = $mainMod, mouse:273, resizewindow	# alterar tamanho da janela com mouse
+
+# --------------------------------------------------------------------------- #
+
+bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+   # volume
+bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-		# volume
+bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle		# volume		
+bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle		# volume
+bindel = ,XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+	# brilho
+bindel = ,XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-	# brilho
+
+# --------------------------------------------------------------------------- #
+
+
+
+# --------------------------------------------------------------------------- #
