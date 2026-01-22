@@ -9,4 +9,4 @@ or force the systemd-boot by passing the --systemd-boot flag like this:
 
 sudo ./uefi-bootloader.sh --systemd-boot
 
-## This script was generated with the use with AI, to be more especific CHAT-GPT o5##
+## This script was generated with the use with AI, to be more especific CHAT-GPT o5
